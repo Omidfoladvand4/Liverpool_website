@@ -202,3 +202,9 @@ height: 28px;
 .fixtures-button:hover{
     transform: scale(1.03);
 }
+.ads {
+    width: 100%;
+    text-align: center;
+    margin: 7rem 0;
+    background: #F6F6F6;
+}
