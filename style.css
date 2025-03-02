@@ -6,6 +6,7 @@
 
 }
 body{
+    width: 100%;
     overflow-x: hidden;
 }
 .advertisement-container{
@@ -123,4 +124,81 @@ nav{
 }
 .women-news {
     color: #ffffff;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-wrapper {
+    display: flex;
+    height: 100%; 
+}
+  .swiper-slide {
+    text-align: center;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    min-height: 400px;
+ 
+  }
+  .fixtures-container{
+    display: flex;
+    align-items: center;
+  }
+.fixtures-item{
+    width: 100%;
+    min-height: 400px;
+    padding: 10px;
+    border: 1px solid gray;
+}
+.fixtures-item-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.information-title{
+    font-weight: 900;
+}
+.fixtures-items-logo img{
+    width: 80px;
+    height: 40px;
+}
+.fixtures-item-main{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 25px;
+    gap: 10px;
+}
+.fixtures-item-main .first-team,
+.fixtures-item-main .second-team{
+    font-size: 28px;
+}
+.fixtures-item-main .first-team img ,
+.fixtures-item-main .second-team img 
+{
+width: 28px;
+height: 28px;
+}
+.fixtures-button{
+    position: absolute;
+    width: 100%;
+
+    background-color: black;
+    color: #ffffff;
+    padding: 15px 30px;
+    left: 0;
+    bottom: 0;
+    text-align:left;
+    font-size: 20px;
+    transition: all 0.3s ease-in;
+}
+.fixtures-button:hover{
+    transform: scale(1.03);
 }

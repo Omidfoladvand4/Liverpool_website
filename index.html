@@ -6,6 +6,7 @@
     <title>Liverpool__Homepage</title>
     <link rel="shortcut icon" href="./images/liverpoolfc_crest.webp" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -37,11 +38,88 @@
            
         </div>
     </header>
-    <main>
-        <div class="women-section">
+    <section class="section">
+        <div class="swiper mySwiper fixtures">
+            <div class="swiper-wrapper fixtures-container">
             
+              <div class="swiper-slide fixtures-item">
+                <div class="fixtures-item-header">
+                    <div class="information">
+                        <p class="information-title">Barclays Women's Super League</p>
+                        <p class="information-date">Sun 2 March — 17:30</p>
+                    </div>
+                    <div class="fixtures-items-logo"><img src="./images/womens-super-league-logo.webp" alt=""></div>
+                </div>
+                <div class="fixtures-item-main">
+                    <div class="first-team"><img src="./images/crystal-palace-crest-updated.webp" alt="crystal-palace">Crystal palace</div>
+                    <br>
+                    <div class="second-team"><img src="./images/lfc-digital-crest-2024.webp" alt="liverpool">Liverpool</div>
+                </div>
+                <button class="fixtures-button">WATCH LIVE <i  class="fa fa-caret-square-o-right "></i> </button>
+              </div>
+              <div class="swiper-slide fixtures-item">
+                <div class="fixtures-item-header">
+                    <div class="information">
+                        <p class="information-title">Premier League 2</p>
+                        <p class="information-date">Sun 2 March — 17:30</p>
+                    </div>
+                    <div class="fixtures-items-logo"><img src="./images/premier-league-2-logo.webp" alt=""></div>
+                </div>
+                <div class="fixtures-item-main">
+                    <div class="first-team"><img src="./images/lfc-digital-crest-2024.webp" alt="liverpool">Liverpool</div>
+                    <br>
+                    <div class="second-team"><img src="./images/middlesbrough-crest.webp" alt="middlesbrough">Middlesbrough</div>
+                </div>
+                <button class="fixtures-button">WATCH LIVE <i  class="fa fa-caret-square-o-right "></i> </button>
+              </div>
+              <div class="swiper-slide fixtures-item">
+                <div class="fixtures-item-header">
+                    <div class="information">
+                        <p class="information-title">U18 Premier League Cup</p>
+                        <p class="information-date">Wed 5 March — 15:30</p>
+                    </div>
+                    <div class="fixtures-items-logo"><img src="./images/u18-premier-league-cup-logo.webp" alt=""></div>
+                </div>
+                <div class="fixtures-item-main">
+                    <div class="first-team"><img src="./images/lfc-digital-crest-2024.webp" alt="liverpool">Liverpool</div>
+                    <br>
+                    <div class="second-team"><img src="./images/reading-fc-crest.webp" alt="reading">Reading</div>
+                </div>
+              </div>
+              <div class="swiper-slide  fixtures-item">
+                <div class="fixtures-item-header">
+                    <div class="information">
+                        <p class="information-title">Champions League</p>
+                        <p class="information-date">Wed 5 March — 23:30</p>
+                    </div>
+                    <div class="fixtures-items-logo"><img src="./images/Competition=Men_ Champions League, Color=Color.webp" alt=""></div>
+                </div>
+                <div class="fixtures-item-main">
+                    <div class="first-team"><img src="./images/lfc-digital-crest-2024.webp" alt="liverpool">Liverpool</div>
+                    <br>
+                    <div class="second-team"><img src="./images/paris-saint-germain-crest_70006c9a70538be767b3999f8635be9a.webp" alt="psg">PSG</div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+    <main class="main">
+        <div class="women-section">
+
         </div>
     </main>
     <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        freeMode: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
 </body>
 </html>
