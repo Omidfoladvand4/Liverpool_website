@@ -2,6 +2,8 @@ const $ = document
 const advertisementImagesContainerElm = $.querySelector('.advertisement-image')
 const newsContainer = $.querySelector('.news-container')
 const womenNewsContainer =  $.querySelector('.women-section')
+const tabList = $.querySelectorAll('.shop-list-item')
+const productsContainer = $.querySelector('.products-container')
 
 
 const advertisementImages = [
@@ -20,6 +22,51 @@ const WomenNewsData = [
     {id:2 , name : "women-news" , dateTitle : "womenNews-date" , newsTitle : 'womenNewsTitle' , title : "Training photos: Liverpool prepare for WSL resumption at Crystal Palace" , date : '1 days ago' , imageSrc: './images/LFCW-training-main.webp' },
     {id:3 , name : "women-news" , dateTitle : "womenNews-date" , newsTitle : 'womenNewsTitle' , title : "Liverpool FC parts company with Matt Beard" , date : ' 2 weeks ago' , imageSrc: './images/matt-beard-thank-you.webp' },
 ]
+const products = [
+    {id:1 , name: 'product' , image: './images/product-1.jpg' , label: 'OFF TO WEMBLEY' ,  title :'LFC Walk On Mug'  , price : '$12.22'},
+    {id:2 , name: 'product' , image: './images/product-2.jpg' , label: 'OFF TO WEMBLEY' ,  title :'LFC Adults This Is Anfield South Tee Black'  , price : '$25.22'},
+    {id:3 , name: 'product' , image: './images/product-3.jpg' , label: 'OFF TO WEMBLEY' ,  title :'LFC Juniors This Is Anfield South Tee Black'  , price : '$18.22'},
+
+    {id:4 , name: 'product' , image: './images/product-4.jpg' , label: '24-25| HOME KIT' ,  title :'LFC Nike Mens 24/25 Home Stadium Jersey'  , price : '$80.00'},
+    {id:5 , name: 'product' , image: './images/product-5.jpg' , label: '24-25| HOME KIT' ,  title :'LFC Nike Little Kids 24/25 Home Kit'  , price : '$41.00'},
+    {id:6 , name: 'product' , image: './images/product-6.jpg' , label: '24-25| HOME KIT' ,  title :'LFC Nike Mens 24/25 Home Match Jersey'  , price : '$110.00'},
+    {id:7 , name: 'product' , image: './images/product-7.jpg' , label: '24-25| HOME KIT' ,  title :'LFC Nike Youth 24/25 Home Stadium Jersey'  , price : '$60.00'},
+    {id:8 , name: 'product' , image: './images/product-8.jpg' , label: '24-25| HOME KIT' ,  title :'LFC Nike Infants 24/25 Home Kit'  , price : '$37.00'},
+
+    {id:9 , name: 'product' , image: './images/product-9.jpg' , label: 'YOU MAY LIKE' ,  title :'LFC Nike Youth 24/25 Strike Drill Top Black'  , price : '$50.00'},
+    {id:10 , name: 'product' , image: './images/product-10.jpg' , label: 'YOU MAY LIKE' ,  title :'LFC Nike Mens Therma-FIT Winter Repel Top Teal'  , price : '$140.00'},
+    {id:11, name: 'product' , image: './images/product-11.jpg' , label: 'YOU MAY LIKE' ,  title :'LFC Quarter Zip Fleece'  , price : '$40.00'},
+
+
+]
+
+
+
+const tabListHandler = (e) => {
+    productsContainer.innerHTML = ""
+    tabList.forEach(tabItem => {
+        tabItem.classList.remove('active')
+    })
+    e.target.classList.add('active')
+    const labelTabList = e.target.innerText
+    const filteredProducts = products.filter(product => product.label === labelTabList);
+    
+    filteredProducts.forEach(product => {
+        productsContainer.insertAdjacentHTML('beforeend' , `
+               <div class="${product.name}">
+                       <div class="product-image">
+                    <img src="${product.image}" alt="${product.name}">
+                </div>
+                <div class="product-title">${product.title}</div>
+                <div class="product-price">${product.price}</div>
+                 <div class="product-button">BUY NOW</div>
+            </div>
+
+            `)
+    })
+    
+
+}
 
 const advertisementSlider = () => {
     let count = 0
@@ -51,3 +98,6 @@ const generateNewsItems = (items , container) => {
 
 generateNewsItems(newsData ,newsContainer )
 generateNewsItems(WomenNewsData ,womenNewsContainer)
+tabList.forEach(tabItem  => {
+    tabItem.addEventListener('click' , tabListHandler)
+})

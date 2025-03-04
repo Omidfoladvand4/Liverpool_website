@@ -178,7 +178,7 @@ nav{
 }
 .fixtures-item-main .first-team,
 .fixtures-item-main .second-team{
-    font-size: 28px;
+    font-size: 17px;
 }
 .fixtures-item-main .first-team img ,
 .fixtures-item-main .second-team img 
@@ -207,4 +207,88 @@ height: 28px;
     text-align: center;
     margin: 7rem 0;
     background: #F6F6F6;
+}
+.shop{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 35px;
+}
+.shop .shop-title{
+    background:black;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.shop-tab-list{
+    width: 30%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+.shop-list-item{
+cursor: pointer;    
+  color: gray;
+  transition: all 0.3s linear;
+
+
+}
+.shop-list-item:hover{
+    color: #ffffff;
+}
+.shop-list-item.active{
+    border-bottom: 1px solid #E31B23;
+    padding: 10px 0;
+    
+}
+.products-container{
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 60px;
+}
+.products-container .product{
+    width: 400px;
+    margin: 0 20px;
+    border: 1px solid gray;
+    padding:  10px 30px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;   
+    gap: 5px; 
+}
+.products-container .product img{
+    width: 200px;
+    object-fit: cover;
+    transition: all  0.3s ease;
+}
+.products-container .product img:hover{
+    transform: scale(.95);
+}
+
+.product-title {
+    color: gray;
+}
+.product-price{
+    font-size: 45px;
+}
+.product-button{
+    width: 100%;
+    padding: 10px 15px;
+    background: black;
+    color: #ffffff;
+    font-weight: 900;
+    transition: all 0.3s ease;
+}
+.product-button:hover{
+    width: 110%;
 }
