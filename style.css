@@ -428,3 +428,35 @@ cursor: pointer;
     font-weight: 900;
     color: #545454;
 }
+footer{
+    width: 100%;
+    background : gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 40px 5px;
+}
+footer > div{
+   border-bottom: 1px solid #ffffff;
+   padding: 15px 0;
+}
+.social{
+    cursor: pointer;
+}
+.downloads-section  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.downloads-section > img{
+    width: 250px;
+    height: 100px;
+}
+
+.copyright-section{
+    color: #ffffff;
+    font-size: small;
+    border-bottom: none;
+}
