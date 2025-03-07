@@ -6,4 +6,5 @@
 <a href="https://omidfoladvand4.github.io/Liverpool_website/"> here 😎<a/>
 <hr>
 <h2>watch it<h2/>
-<video src = './images/demo.mp4'>
+
+ <video src = './images/demo.mp4' controls></video>
