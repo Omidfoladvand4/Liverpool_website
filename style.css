@@ -409,3 +409,22 @@ cursor: pointer;
 .season-data > div > div:nth-last-child(1){
     color: black;
 }
+
+.rewards-section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.rewards-section div{
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 28px;
+    font-weight: 900;
+    color: #545454;
+}
